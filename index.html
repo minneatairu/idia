@@ -144,67 +144,66 @@
     <nav>
       <div class="brand">IDIA</div>
       <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="active" href="#image">(IMAGE)</a></li>
+        <li><a href="#ai-png">(AI-PNG)</a></li>
+        <li><a href="#ai-3d">(AI-3D)</a></li>
+        <li><a href="#printed0">(PRINTED0)</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home">
+    <section id="image">
       <div class="section-content">
-        <h1>Welcome to IDIA</h1>
+        <h1>High-Fidelity Image Concepts</h1>
         <p>
-          Discover a modern single-page layout with smooth navigation and engaging content. This
-          example highlights how a compact structure can deliver a complete story about your brand
-          without requiring visitors to jump between multiple pages.
+          Explore stunning hero imagery and detailed concept art crafted to capture attention. Our
+          team blends photography, illustration, and compositing techniques to tell compelling visual
+          stories at a glance.
         </p>
-        <a class="cta-button" href="#contact">Start a Conversation</a>
+        <a class="cta-button" href="#printed0">Discuss a Project</a>
       </div>
     </section>
 
-    <section id="about">
+    <section id="ai-png">
       <div class="section-content">
-        <h2>About</h2>
+        <h2>AI-Powered PNG Exports</h2>
         <p>
-          We craft digital experiences designed around clarity and purpose. Our approach blends clean
-          design with thoughtful storytelling so visitors understand who you are and why your work
-          matters.
+          Generate crisp, transparent-background assets ideal for branding, UI overlays, and rapid
+          iteration. Intelligent edge detection and tone mapping ensure every export is production-ready.
         </p>
         <p>
-          Each section on this page demonstrates how you can guide users through your narrative,
-          keeping your most important message front and center.
-        </p>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="section-content">
-        <h2>Services</h2>
-        <p>
-          From concept to launch, our team supports every step of your digital journey. Whether you
-          need a brand refresh, a new product microsite, or a polished marketing landing page, we
-          bring your ideas to life with responsive layouts and accessible interactions.
-        </p>
-        <p>
-          This single-page template shows how to organize offerings into digestible sections that are
-          easy to navigate on any device.
+          We deliver layered source files alongside optimized PNGs so your design system remains nimble
+          across platforms.
         </p>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="ai-3d">
       <div class="section-content">
-        <h2>Contact</h2>
+        <h2>AI-Driven 3D Models</h2>
         <p>
-          Ready to collaborate? Reach out and let&apos;s design something remarkable together. Share your
-          project goals, timeline, and inspiration so we can craft a proposal tailored to your needs.
+          Harness procedural generation and machine learning to craft detailed 3D assets faster than
+          ever. From product visualizations to cinematic environments, our AI toolchain accelerates
+          modeling, texturing, and lighting.
         </p>
         <p>
-          Email us at <a href="mailto:hello@example.com">hello@example.com</a> or call
-          <a href="tel:+1234567890">(123) 456-7890</a>.
+          Interactive previews and glTF exports streamline collaboration between designers, developers,
+          and marketing teams.
+        </p>
+      </div>
+    </section>
+
+    <section id="printed0">
+      <div class="section-content">
+        <h2>PRINTED0 Studio</h2>
+        <p>
+          Translate digital breakthroughs into tangible experiences. From gallery-quality prints to
+          packaging mockups, we ensure every artifact reflects the fidelity of its source concept.
+        </p>
+        <p>
+          Start the conversation at <a href="mailto:print@idia.studio">print@idia.studio</a> or call
+          <a href="tel:+1234567890">(123) 456-7890</a> to plan your next release.
         </p>
       </div>
     </section>
@@ -212,8 +211,11 @@
 
   <footer>
     &copy; <span id="year"></span> IDIA Studio. All rights reserved.
+    <div id="react-root"></div>
   </footer>
 
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script>
     // Update the footer year automatically.
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -238,6 +240,19 @@
         observer.observe(section);
       }
     });
+
+    // Initialize a minimal React component to confirm ReactJS availability.
+    const reactRoot = document.getElementById("react-root");
+    if (reactRoot) {
+      const root = ReactDOM.createRoot(reactRoot);
+      root.render(
+        React.createElement(
+          "p",
+          { style: { marginTop: "1rem", color: "#4b5563", fontSize: "0.9rem" } },
+          "Powered by ReactJS for dynamic experiences."
+        )
+      );
+    }
   </script>
 </body>
 </html>
