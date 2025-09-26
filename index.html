@@ -29,12 +29,16 @@
       z-index: 1000;
     }
 
+    :root {
+      --page-padding: clamp(1rem, 5vw, 3.5rem);
+    }
+
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      padding: 1rem 2rem;
+      padding: 1rem var(--page-padding);
       width: 100%;
     }
 
@@ -73,6 +77,7 @@
       text-decoration: none;
       color: #1f2937;
       font-weight: 400;
+      font-variation-settings: "wght" 400;
       font-size: 3rem;
       padding: 0.25rem 0;
     }
@@ -83,6 +88,11 @@
       color: #2563eb;
     }
 
+    a:hover,
+    a:focus {
+      text-decoration: none;
+    }
+
     sup {
       font-size: 0.65em;
       letter-spacing: 0.08em;
@@ -90,7 +100,7 @@
 
     section {
       min-height: 75vh;
-      padding: 4rem 1.5rem;
+      padding: 4rem var(--page-padding);
       display: flex;
       align-items: center;
     }
@@ -99,7 +109,7 @@
       width: 100%;
     }
 
-    #image {
+    #museum {
       background-image: url("./public/museum.jpg");
       background-size: cover;
       background-position: center;
@@ -135,7 +145,7 @@
 
     footer {
       text-align: center;
-      padding: 2rem 1rem 3rem;
+      padding: 2rem var(--page-padding) 3rem;
       color: #6b7280;
     }
 
@@ -151,7 +161,7 @@
       }
 
       section {
-        padding: 3rem 1.25rem;
+        padding: 3rem var(--page-padding);
       }
     }
   </style>
@@ -161,7 +171,7 @@
     <nav>
       <div class="brand">XI</div>
       <ul>
-        <li><a class="active" href="#image">IMAGE</a></li>
+        <li><a class="active" href="#museum">MUSEUM</a></li>
         <li><a href="#ai-png">AI<sup>PNG</sup></a></li>
         <li><a href="#ai-3d">AI<sup>3D</sup></a></li>
         <li><a href="#printed0">PRINTED0</a></li>
@@ -170,7 +180,7 @@
   </header>
 
   <main>
-    <section id="image">
+    <section id="museum">
       <div class="section-content">
         <h1>High-Fidelity Image Concepts</h1>
         <p>
