@@ -32,7 +32,8 @@
     nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 1rem;
       max-width: 960px;
       margin: 0 auto;
       padding: 1rem 1.5rem;
@@ -47,10 +48,17 @@
 
     nav ul {
       display: flex;
-      gap: 1.25rem;
+      gap: 0;
       padding: 0;
       margin: 0;
       list-style: none;
+      align-items: center;
+    }
+
+    nav ul li + li::before {
+      content: "\2192";
+      color: #9ca3af;
+      margin: 0 1rem;
     }
 
     nav a {
@@ -59,6 +67,11 @@
       font-weight: 500;
       padding: 0.25rem 0;
       position: relative;
+    }
+
+    sup {
+      font-size: 0.65em;
+      letter-spacing: 0.08em;
     }
 
     nav a::after {
@@ -148,8 +161,8 @@
       <div class="brand">IDIA</div>
       <ul>
         <li><a class="active" href="#image">(IMAGE)</a></li>
-        <li><a href="#ai-png">(AI-PNG)</a></li>
-        <li><a href="#ai-3d">(AI-3D)</a></li>
+        <li><a href="#ai-png">(AI-<sup>PNG</sup>)</a></li>
+        <li><a href="#ai-3d">(AI-<sup>3D</sup>)</a></li>
         <li><a href="#printed0">(PRINTED0)</a></li>
       </ul>
     </nav>
@@ -170,7 +183,7 @@
 
     <section id="ai-png">
       <div class="section-content">
-        <h2>AI-Powered PNG Exports</h2>
+        <h2>AI-Powered <sup>PNG</sup> Exports</h2>
         <p>
           Generate crisp, transparent-background assets ideal for branding, UI overlays, and rapid
           iteration. Intelligent edge detection and tone mapping ensure every export is production-ready.
@@ -184,7 +197,7 @@
 
     <section id="ai-3d">
       <div class="section-content">
-        <h2>AI-Driven 3D Models</h2>
+        <h2>AI-Driven <sup>3D</sup> Models</h2>
         <p>
           Harness procedural generation and machine learning to craft detailed 3D assets faster than
           ever. From product visualizations to cinematic environments, our AI toolchain accelerates
